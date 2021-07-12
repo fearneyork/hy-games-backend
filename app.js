@@ -3,7 +3,9 @@ const express =require('express');
 const { handleServerErrors, handleCustomErrors, handlePSQLErrors, handlePathError } = require('./errors/index.errors');
 const apiRouter = require('./routes/api.routes');
 const app = express();
+const cors = require('cors');
 
+app.use(cors());
 app.use(express.json());
 
 //--END POINT ROUTING--//
